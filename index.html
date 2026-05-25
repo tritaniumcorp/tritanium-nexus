@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tritanium Nexus™</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #030712;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .card {
+      background: #07111f;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .hero-glow {
+      background:
+        radial-gradient(circle at top left, rgba(34,211,238,0.28), transparent 35%),
+        radial-gradient(circle at top right, rgba(59,130,246,0.22), transparent 32%),
+        radial-gradient(circle at bottom, rgba(245,158,11,0.12), transparent 35%);
+    }
+  </style>
+</head>
+
+<body class="text-white">
+
+<main class="min-h-screen">
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden px-6 py-24 md:px-16">
+    <div class="absolute inset-0 hero-glow"></div>
+
+    <div class="relative mx-auto max-w-7xl">
+
+      <div class="mb-6 flex flex-wrap items-center gap-4">
+
+        <div class="inline-flex rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200">
+          Tritanium Nexus™
+        </div>
+
+        <button
+          onclick="toggleLanguage()"
+          id="langToggle"
+          class="rounded-full border border-white/20 px-5 py-2 text-sm font-bold"
+        >
+          Español
+        </button>
+
+      </div>
+
+      <h1
+        class="max-w-5xl text-5xl font-black tracking-tight md:text-7xl"
+        data-en="The predictive AI core for resilient infrastructure."
+        data-es="El núcleo de IA predictiva para infraestructura resiliente."
+      >
+        The predictive AI core for resilient infrastructure.
+      </h1>
+
+      <p
+        class="mt-6 max-w-3xl text-lg text-slate-300 md:text-2xl"
+        data-en="Tritanium Nexus™ connects sensors, energy systems, water infrastructure, drones, emergency communications, and regional command centers into one intelligent operating layer."
+        data-es="Tritanium Nexus™ conecta sensores, sistemas de energía, infraestructura de agua, drones, comunicaciones de emergencia y centros regionales de comando en una sola capa operativa inteligente."
+      >
+        Tritanium Nexus™ connects sensors, energy systems, water infrastructure,
+        drones, emergency communications, and regional command centers into one
+        intelligent operating layer.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+
+        <a
+          href="#architecture"
+          class="rounded-full bg-cyan-400 px-6 py-3 font-bold text-black"
+          data-en="View Architecture"
+          data-es="Ver Arquitectura"
+        >
+          View Architecture
+        </a>
+
+        <a
+          href="#contact"
+          class="rounded-full border border-white/20 px-6 py-3 font-bold"
+          data-en="Request Nexus Brief"
+          data-es="Solicitar Resumen Nexus"
+        >
+          Request Nexus Brief
+        </a>
+
+      </div>
+
+      <div class="mt-16 grid gap-6 md:grid-cols-4">
+
+        <div class="glass rounded-3xl p-7">
+          <h2 class="text-2xl font-bold text-cyan-300" data-en="Sense" data-es="Detectar">Sense</h2>
+          <p class="mt-3 text-slate-300" data-en="Collect live telemetry from infrastructure, weather, drones, sensors, and field nodes." data-es="Recolecta telemetría en vivo de infraestructura, clima, drones, sensores y nodos de campo.">
+            Collect live telemetry from infrastructure, weather, drones, sensors, and field nodes.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+          <h2 class="text-2xl font-bold text-blue-300" data-en="Predict" data-es="Predecir">Predict</h2>
+          <p class="mt-3 text-slate-300" data-en="Forecast risk before hazards escalate into disasters or infrastructure failures." data-es="Pronostica riesgos antes de que los peligros escalen a desastres o fallas de infraestructura.">
+            Forecast risk before hazards escalate into disasters or infrastructure failures.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+          <h2 class="text-2xl font-bold text-amber-300" data-en="Coordinate" data-es="Coordinar">Coordinate</h2>
+          <p class="mt-3 text-slate-300" data-en="Coordinate energy, water, drones, communications, response systems, and command centers." data-es="Coordina energía, agua, drones, comunicaciones, sistemas de respuesta y centros de comando.">
+            Coordinate energy, water, drones, communications, response systems, and command centers.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+          <h2 class="text-2xl font-bold text-emerald-300" data-en="Protect" data-es="Proteger">Protect</h2>
+          <p class="mt-3 text-slate-300" data-en="Help preserve life, infrastructure continuity, and emergency operations." data-es="Ayuda a preservar la vida, la continuidad de infraestructura y las operaciones de emergencia.">
+            Help preserve life, infrastructure continuity, and emergency operations.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+<!-- ARCHITECTURE -->
+  <section id="architecture" class="px-6 py-20 md:px-16">
+
+    <div class="mx-auto max-w-7xl">
+
+      <p
+        class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300"
+        data-en="Nexus Architecture"
+        data-es="Arquitectura Nexus"
+      >
+        Nexus Architecture
+      </p>
+
+      <h2
+        class="mt-4 max-w-5xl text-4xl font-black md:text-6xl"
+        data-en="A layered intelligence system for infrastructure protection."
+        data-es="Un sistema de inteligencia por capas para la protección de infraestructura."
+      >
+        A layered intelligence system for infrastructure protection.
+      </h2>
+
+      <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+        <!-- CARD -->
+        <div class="card rounded-3xl p-7">
+
+          <div class="mb-5 inline-flex rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-300">
+            INPUT LAYER
+          </div>
+
+          <h3
+            class="text-2xl font-bold"
+            data-en="Sensor Grid"
+            data-es="Red de Sensores"
+          >
+            Sensor Grid
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="Environmental telemetry, weather systems, thermal cameras, infrastructure sensors, drones, roadway systems, and utility monitoring."
+            data-es="Telemetría ambiental, sistemas climáticos, cámaras térmicas, sensores de infraestructura, drones, sistemas viales y monitoreo de servicios."
+          >
+            Environmental telemetry,
+            weather systems,
+            thermal cameras,
+            infrastructure sensors,
+            drones,
+            roadway systems,
+            and utility monitoring.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="card rounded-3xl p-7">
+
+          <div class="mb-5 inline-flex rounded-full bg-blue-400/10 px-3 py-1 text-xs font-bold text-blue-300">
+            ANALYTICS
+          </div>
+
+          <h3
+            class="text-2xl font-bold"
+            data-en="Prediction Engine"
+            data-es="Motor Predictivo"
+          >
+            Prediction Engine
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="AI-assisted forecasting for wildfire spread, flooding, infrastructure stress, black ice formation, outages, and emergency escalation."
+            data-es="Pronóstico asistido por IA para propagación de incendios, inundaciones, estrés de infraestructura, formación de hielo negro, apagones y escalación de emergencias."
+          >
+            AI-assisted forecasting
+            for wildfire spread,
+            flooding,
+            infrastructure stress,
+            black ice formation,
+            outages,
+            and emergency escalation.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="card rounded-3xl p-7">
+
+          <div class="mb-5 inline-flex rounded-full bg-amber-400/10 px-3 py-1 text-xs font-bold text-amber-300">
+            RESPONSE
+          </div>
+
+          <h3
+            class="text-2xl font-bold"
+            data-en="Response Coordination"
+            data-es="Coordinación de Respuesta"
+          >
+            Response Coordination
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="Coordinates PowerCore™, WildfireShield™, Guardian Pods™, Sentinel Towers™, AeroRelay™, and emergency response systems."
+            data-es="Coordina PowerCore™, WildfireShield™, Guardian Pods™, Sentinel Towers™, AeroRelay™ y sistemas de respuesta de emergencia."
+          >
+            Coordinates PowerCore™,
+            WildfireShield™,
+            Guardian Pods™,
+            Sentinel Towers™,
+            AeroRelay™,
+            and emergency response systems.
+          </p>
+
+        </div>
+
+        <!-- CARD -->
+        <div class="card rounded-3xl p-7">
+
+          <div class="mb-5 inline-flex rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-bold text-emerald-300">
+            COMMAND
+          </div>
+
+          <h3
+            class="text-2xl font-bold"
+            data-en="Regional Command"
+            data-es="Comando Regional"
+          >
+            Regional Command
+          </h3>
+
+          <p
+            class="mt-4 text-slate-400"
+            data-en="Live dashboards, infrastructure telemetry, resource allocation, emergency coordination, and operational continuity."
+            data-es="Paneles en vivo, telemetría de infraestructura, asignación de recursos, coordinación de emergencias y continuidad operativa."
+          >
+            Live dashboards,
+            infrastructure telemetry,
+            resource allocation,
+            emergency coordination,
+            and operational continuity.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SYSTEM INTEGRATIONS -->
+  <section class="px-6 py-20 md:px-16">
+
+    <div class="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[#07111f] p-8 md:p-14">
+
+      <p
+        class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300"
+        data-en="Integrated Systems"
+        data-es="Sistemas Integrados"
+      >
+        Integrated Systems
+      </p>
+
+      <h2
+        class="mt-4 max-w-5xl text-4xl font-black md:text-6xl"
+        data-en="Nexus™ operates as the intelligence layer across the entire Tritanium ecosystem."
+        data-es="Nexus™ opera como la capa de inteligencia de todo el ecosistema Tritanium."
+      >
+        Nexus™ operates as the intelligence layer across the entire Tritanium ecosystem.
+      </h2>
+
+      <div class="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-cyan-300">PowerCore™</h3>
+          <p class="mt-3 text-slate-400"
+             data-en="AI-managed resilient energy systems and intelligent microgrids."
+             data-es="Sistemas energéticos resilientes administrados por IA y microredes inteligentes.">
+             AI-managed resilient energy systems and intelligent microgrids.
+          </p>
+        </div>
+
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-amber-300">WildfireShield™</h3>
+          <p class="mt-3 text-slate-400"
+             data-en="Wildfire prediction, drone coordination, and FireSphere™ deployment."
+             data-es="Predicción de incendios forestales, coordinación de drones y despliegue FireSphere™.">
+             Wildfire prediction, drone coordination, and FireSphere™ deployment.
+          </p>
+        </div>
+
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-blue-300">IceShield™</h3>
+          <p class="mt-3 text-slate-400"
+             data-en="Roadway monitoring and predictive black ice prevention."
+             data-es="Monitoreo vial y prevención predictiva de hielo negro.">
+             Roadway monitoring and predictive black ice prevention.
+          </p>
+        </div>
+
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-emerald-300">Guardian Pods™</h3>
+          <p class="mt-3 text-slate-400"
+             data-en="Distributed autonomous emergency support infrastructure."
+             data-es="Infraestructura autónoma distribuida de soporte de emergencia.">
+             Distributed autonomous emergency support infrastructure.
+          </p>
+        </div>
+
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-purple-300">Sentinel Towers™</h3>
+          <p class="mt-3 text-slate-400"
+             data-en="Environmental awareness, communications relay, and drone support."
+             data-es="Monitoreo ambiental, retransmisión de comunicaciones y soporte de drones.">
+             Environmental awareness, communications relay, and drone support.
+          </p>
+        </div>
+
+        <div class="glass rounded-2xl p-6">
+          <h3 class="text-xl font-bold text-cyan-300">AeroRelay™</h3>
+          <p class="mt-3 text-slate-400"
+             data-en="Emergency communications mesh and aerial relay systems."
+             data-es="Sistemas de malla de comunicaciones de emergencia y retransmisión aérea.">
+             Emergency communications mesh and aerial relay systems.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- LIVE OPERATIONS -->
+  <section class="px-6 py-20 md:px-16">
+
+    <div class="mx-auto max-w-7xl">
+
+      <p
+        class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300"
+        data-en="Operational Intelligence"
+        data-es="Inteligencia Operacional"
+      >
+        Operational Intelligence
+      </p>
+
+      <h2
+        class="mt-4 max-w-5xl text-4xl font-black md:text-6xl"
+        data-en="From prediction to coordinated response."
+        data-es="De la predicción a la respuesta coordinada."
+      >
+        From prediction to coordinated response.
+      </h2>
+
+      <div class="mt-14 grid gap-6 lg:grid-cols-2">
+
+        <!-- LEFT -->
+        <div class="glass rounded-[2rem] p-8">
+
+          <div class="mb-8 flex items-center justify-between">
+
+            <div>
+              <p class="text-sm uppercase tracking-[0.3em] text-cyan-300">
+                NEXUS LIVE GRID
+              </p>
+
+              <h3
+                class="mt-3 text-3xl font-black"
+                data-en="Infrastructure Status"
+                data-es="Estado de Infraestructura"
+              >
+                Infrastructure Status
+              </h3>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <div class="h-3 w-3 rounded-full bg-emerald-400"></div>
+
+              <span
+                class="text-sm text-emerald-300"
+                data-en="Operational"
+                data-es="Operacional"
+              >
+                Operational
+              </span>
+            </div>
+
+          </div>
+
+          <div class="space-y-5">
+
+            <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+              <div class="mb-2 flex items-center justify-between">
+                <span class="font-bold text-cyan-300">PowerCore™</span>
+                <span class="text-sm text-emerald-300">98%</span>
+              </div>
+
+              <div class="h-2 rounded-full bg-white/10">
+                <div class="h-2 w-[98%] rounded-full bg-cyan-400"></div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+              <div class="mb-2 flex items-center justify-between">
+                <span class="font-bold text-amber-300">WildfireShield™</span>
+                <span class="text-sm text-amber-300">Monitoring</span>
+              </div>
+
+              <div class="h-2 rounded-full bg-white/10">
+                <div class="h-2 w-[72%] rounded-full bg-amber-400"></div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+              <div class="mb-2 flex items-center justify-between">
+                <span class="font-bold text-blue-300">IceShield™</span>
+                <span class="text-sm text-blue-300">Standby</span>
+              </div>
+
+              <div class="h-2 rounded-full bg-white/10">
+                <div class="h-2 w-[64%] rounded-full bg-blue-400"></div>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+              <div class="mb-2 flex items-center justify-between">
+                <span class="font-bold text-emerald-300">Guardian Pods™</span>
+                <span class="text-sm text-emerald-300">Connected</span>
+              </div>
+
+              <div class="h-2 rounded-full bg-white/10">
+                <div class="h-2 w-[91%] rounded-full bg-emerald-400"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="grid gap-6">
+
+          <div class="card rounded-[2rem] p-8">
+
+            <div class="mb-5 inline-flex rounded-full bg-red-400/10 px-3 py-1 text-xs font-bold text-red-300">
+              ACTIVE MONITORING
+            </div>
+
+            <h3
+              class="text-3xl font-black"
+              data-en="Disaster Intelligence"
+              data-es="Inteligencia de Desastres"
+            >
+              Disaster Intelligence
+            </h3>
+
+            <p
+              class="mt-5 text-slate-400"
+              data-en="Nexus™ continuously analyzes weather, thermal activity, infrastructure stress, flood probability, wildfire spread, and communication outages."
+              data-es="Nexus™ analiza continuamente clima, actividad térmica, estrés de infraestructura, probabilidad de inundaciones, propagación de incendios y fallas de comunicación."
+            >
+              Nexus™ continuously analyzes weather,
+              thermal activity,
+              infrastructure stress,
+              flood probability,
+              wildfire spread,
+              and communication outages.
+            </p>
+
+          </div>
+
+          <div class="card rounded-[2rem] p-8">
+
+            <div class="mb-5 inline-flex rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-bold text-cyan-300">
+              EDGE AI
+            </div>
+
+            <h3
+              class="text-3xl font-black"
+              data-en="Distributed Intelligence"
+              data-es="Inteligencia Distribuida"
+            >
+              Distributed Intelligence
+            </h3>
+
+            <p
+              class="mt-5 text-slate-400"
+              data-en="Nexus Edge Nodes allow local infrastructure systems to continue operating even during communications or grid failures."
+              data-es="Los Nodos Edge Nexus permiten que los sistemas locales continúen operando incluso durante fallas de comunicación o energía."
+            >
+              Nexus Edge Nodes allow local
+              infrastructure systems to continue
+              operating even during communications
+              or grid failures.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GLOBAL COMMAND -->
+  <section class="px-6 py-20 md:px-16">
+
+    <div class="mx-auto max-w-7xl rounded-[2rem] border border-cyan-400/20 bg-cyan-400/5 p-8 md:p-14">
+
+      <p
+        class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300"
+        data-en="Global Nexus Network"
+        data-es="Red Global Nexus"
+      >
+        Global Nexus Network
+      </p>
+
+      <h2
+        class="mt-4 max-w-5xl text-4xl font-black md:text-6xl"
+        data-en="Built for regional deployment and international infrastructure coordination."
+        data-es="Construido para despliegue regional y coordinación internacional de infraestructura."
+      >
+        Built for regional deployment and international infrastructure coordination.
+      </h2>
+
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+
+        <div class="glass rounded-3xl p-7">
+          <h3 class="text-2xl font-bold text-cyan-300"
+              data-en="Regional Command"
+              data-es="Comando Regional">
+            Regional Command
+          </h3>
+
+          <p class="mt-4 text-slate-400"
+             data-en="Country-level infrastructure monitoring and emergency coordination."
+             data-es="Monitoreo de infraestructura y coordinación de emergencias a nivel país.">
+            Country-level infrastructure monitoring and emergency coordination.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+          <h3 class="text-2xl font-bold text-amber-300"
+              data-en="Infrastructure AI"
+              data-es="IA de Infraestructura">
+            Infrastructure AI
+          </h3>
+
+          <p class="mt-4 text-slate-400"
+             data-en="AI-assisted forecasting and operational support for governments and infrastructure operators."
+             data-es="Pronóstico asistido por IA y soporte operacional para gobiernos y operadores de infraestructura.">
+            AI-assisted forecasting and operational support for governments and infrastructure operators.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+          <h3 class="text-2xl font-bold text-blue-300"
+              data-en="Humanitarian Operations"
+              data-es="Operaciones Humanitarias">
+            Humanitarian Operations
+          </h3>
+
+          <p class="mt-4 text-slate-400"
+             data-en="Support for water, power, communications, and emergency continuity in vulnerable regions."
+             data-es="Soporte para agua, energía, comunicaciones y continuidad de emergencia en regiones vulnerables.">
+            Support for water, power, communications, and emergency continuity in vulnerable regions.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-7">
+          <h3 class="text-2xl font-bold text-emerald-300"
+              data-en="Resilient Infrastructure"
+              data-es="Infraestructura Resiliente">
+            Resilient Infrastructure
+          </h3>
+
+          <p class="mt-4 text-slate-400"
+             data-en="Infrastructure designed to continue operating during disaster and instability."
+             data-es="Infraestructura diseñada para continuar operando durante desastres e inestabilidad.">
+            Infrastructure designed to continue operating during disaster and instability.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+            </section>
+            <!-- CONTACT -->
+  <section id="contact" class="px-6 py-20 md:px-16">
+
+    <div class="mx-auto max-w-7xl rounded-[2rem] bg-gradient-to-r from-cyan-400 to-blue-500 p-10 text-black md:p-14">
+
+      <h2
+        class="text-4xl font-black md:text-5xl"
+        data-en="Ready for infrastructure, government, and strategic partnerships."
+        data-es="Listos para alianzas estratégicas, gubernamentales y de infraestructura."
+      >
+        Ready for infrastructure, government, and strategic partnerships.
+      </h2>
+
+      <p
+        class="mt-4 max-w-4xl text-lg font-medium"
+        data-en="Tritanium Nexus™ is being developed to support predictive infrastructure, emergency coordination, resilient communications, AI-assisted disaster response, and operational continuity systems."
+        data-es="Tritanium Nexus™ está siendo desarrollado para respaldar infraestructura predictiva, coordinación de emergencias, comunicaciones resilientes, respuesta a desastres asistida por IA y sistemas de continuidad operativa."
+      >
+        Tritanium Nexus™ is being developed
+        to support predictive infrastructure,
+        emergency coordination,
+        resilient communications,
+        AI-assisted disaster response,
+        and operational continuity systems.
+      </p>
+
+      <div class="mt-10 flex flex-wrap gap-4">
+
+        <a
+          href="mailto:info@tritaniumcorp.com"
+          class="rounded-full bg-black px-6 py-3 font-bold text-white"
+          data-en="Contact Tritanium"
+          data-es="Contactar Tritanium"
+        >
+          Contact Tritanium
+        </a>
+
+        <a
+          href="https://tritaniumcorp.com"
+          class="rounded-full border border-black/20 px-6 py-3 font-bold"
+          data-en="Visit Tritanium"
+          data-es="Visitar Tritanium"
+        >
+          Visit Tritanium
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 px-6 py-10 text-sm text-slate-500 md:px-16">
+
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 md:flex-row md:items-center md:justify-between">
+
+      <p>Tritanium Nexus™</p>
+
+      <p
+        data-en="Doctrine: Sense. Predict. Intervene. Protect."
+        data-es="Doctrina: Detectar. Predecir. Intervenir. Proteger."
+      >
+        Doctrine: Sense. Predict. Intervene. Protect.
+      </p>
+
+      <p>© 2026 The Tritanium Corporation</p>
+
+    </div>
+
+  </footer>
+
+</main>
+
+<script>
+
+  let currentLang = "en";
+
+  function toggleLanguage() {
+
+    currentLang =
+      currentLang === "en"
+        ? "es"
+        : "en";
+
+    document
+      .querySelectorAll("[data-en]")
+      .forEach((el) => {
+
+        el.innerHTML =
+          currentLang === "en"
+            ? el.getAttribute("data-en")
+            : el.getAttribute("data-es");
+
+      });
+
+    document
+      .getElementById("langToggle")
+      .innerText =
+        currentLang === "en"
+          ? "Español"
+          : "English";
+
+    document.documentElement.lang =
+      currentLang;
+
+  }
+
+</script>
+
+</body>
+</html>
